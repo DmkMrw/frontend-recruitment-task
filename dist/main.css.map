@@ -1,1 +1,1 @@
-{"version":3,"sources":[],"names":[],"mappings":"","file":"main.css","sourcesContent":[]}
+{"version":3,"sources":["main.scss","main.css"],"names":[],"mappings":"AAAA,GACK,SAAA,CACA,cCCL","file":"main.css","sourcesContent":["h1 {\r\n     color:red;\r\n     font-size: 30px;\r\n}","h1 {\n  color: red;\n  font-size: 30px;\n}"]}
