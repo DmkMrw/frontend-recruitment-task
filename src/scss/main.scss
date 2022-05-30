@@ -4,7 +4,7 @@
 
 .container {
      max-width: 1440px;
-          max-height: 960px;
+     max-height: 960px;
      margin: 0 auto;
      height: 100vh;
      position: relative;
@@ -41,34 +41,36 @@
      top: 375px;
      background: #FFFFFF;
      z-index: 3;
-     .rst {
-          position: absolute;
-          top:55%;
-          left:50%;
-          padding: 16px 40px;
-          gap: 10px;
-          border:none;
-          background: $colorButton;
-          border-radius: 32px;
-          &:hover {
-               cursor: pointer;
-               background: $colorButtonHover;
-          }
-          .span-btn {
-               width: 48px;
-               height: 16px;
-               font-family: 'Roboto';
-               font-style: normal;
-               font-weight: 700;
-               font-size: 16px;
-               line-height: 100%;
-               color: $colorDark;
-               order: 0;
-               flex-grow: 0;
-          };
-     };
-
 };
+
+.rst {
+     display: none;
+     position: absolute;
+     top:55%;
+     left:50%;
+     padding: 16px 40px;
+     gap: 10px;
+     border:none;
+     background: $colorButton;
+     border-radius: 32px;
+     &:hover {
+          cursor: pointer;
+          background: $colorButtonHover;
+     }
+     .span-btn {
+          width: 48px;
+          height: 16px;
+          font-family: 'Roboto';
+          font-style: normal;
+          font-weight: 700;
+          font-size: 16px;
+          line-height: 100%;
+          color: $colorDark;
+          order: 0;
+          flex-grow: 0;
+     };
+};
+
 .active {
      display: block;
 }
@@ -164,34 +166,34 @@
 
 @media (max-width:1430px){
 
-.img-hero {
-     position: absolute;
-     left: 46%;
-     top: 30%;
-     transform: translate(-50%, -50%);
+     .container {
+          .img-hero {
+          position: absolute;
+          left: 47%;
+          top: 30%;
+          transform: translate(-50%, -50%);
+          };
+     };
+
+     .content {
+          position: absolute;
+          left: 50%;
+          top: 65%;
+          transform: translate(-50%, -50%);
+          margin-left: 0;
+
+
+          .content-title {
+               text-align: center;
+          };
+
+          .content-description{
+               text-align: center;
+          };
+
+          .content-btn {
+               display: block;
+               margin: 0 auto;
+          };
+     };
 };
-
-.content {
-     position: absolute;
-     left: 50%;
-     top: 65%;
-     transform: translate(-50%, -50%);
-     margin-left: 0;
-
-
-     .content-title {
-          text-align: center;
-     };
-
-     .content-description{
-          text-align: center;
-     };
-
-     .content-btn {
-          display: block;
-          margin: 0 auto;
-     };
-};
-
-
-}

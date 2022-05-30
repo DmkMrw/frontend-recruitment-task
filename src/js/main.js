@@ -8,15 +8,7 @@ const overlay = selectElement('.overlay');
 const alrt = selectElement('.alert');
 const section = selectElement('.section');
 const numOfClick = selectElement('.numOfClick');
-
-//variables
-
-
-
-
-
-
-
+const rstButton = selectElement('.rst')
 
 
 // functions
@@ -27,12 +19,16 @@ const showAlert = () => {
 
      let counter = 0;
 
+     if (localStorage.getItem('number') == 5) {
+          rstButton.classList.add('active');
+          rstButton.addEventListener('click' ,()=> rstAction())
 
-     if (localStorage.getItem('number') == 0) {
-          counter = 0;
-     } else if (localStorage.getItem('number') > 4) {
-          counter = 0;
-     } else counter = localStorage.getItem('number');
+     } else if (localStorage.getItem('number') == 0) {
+          localStorage.setItem('number', 0);
+     } else {
+          counter = localStorage.getItem('number');
+          rstButton.classList.remove('active');
+     }
 
      counter++;
 
@@ -45,9 +41,6 @@ const showAlert = () => {
      let result = localStorage.getItem('number');
      numOfClick.innerHTML = `${result} times`;
 
-     if (result > 2) {
-          counter = 0
-     }
 };
 
 const hideAlert = () => {
@@ -55,6 +48,12 @@ const hideAlert = () => {
      alrt.classList.remove('active');
 };
 
+const rstAction = () => {
+     localStorage.setItem('number', 0);
+     rstButton.classList.remove('active');
+     hideAlert();
+     console.log(localStorage.getItem('number'));
+}
 
 
 // buttons
